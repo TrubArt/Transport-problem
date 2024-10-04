@@ -16,12 +16,6 @@ public:
 	Field& operator=(double);
 	Field& operator+=(const Field&);
 	Field& operator-=(const Field&);
-	bool operator<(const Field&) const;
-	bool operator>(const Field&) const;
-	bool operator==(const Field&) const;
-	bool operator!=(const Field&) const;
-	bool operator<=(const Field&) const;
-	bool operator>=(const Field&) const;
 
 	double get() const;
 	std::string toString() const;
@@ -32,6 +26,12 @@ protected:
 std::ostream& operator<<(std::ostream&, const Field&);
 Field operator+(const Field&, const Field&);
 Field operator-(const Field&, const Field&);
+bool operator<(const Field&, const Field&);
+bool operator>(const Field&, const Field&);
+bool operator==(const Field&, const Field&);
+bool operator!=(const Field&, const Field&);
+bool operator<=(const Field&, const Field&);
+bool operator>=(const Field&, const Field&);
 
 
 

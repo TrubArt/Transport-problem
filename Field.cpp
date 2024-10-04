@@ -52,34 +52,34 @@ Field operator-(const Field& x, const Field& y)
 	return tmp;
 }
 
-bool Field::operator<(const Field& x) const
+bool operator<(const Field& a, const Field& b)
 {
-	return value < x.value;
+	return a.get() < b.get();
 }
 
-bool Field::operator>(const Field& x) const
+bool operator>(const Field& a, const Field& b)
 {
-	return x < *this;
+	return b < a;
 }
 
-bool Field::operator==(const Field& x) const
+bool operator==(const Field& a, const Field& b)
 {
-	return value == x.value;
+	return a.get() == b.get();
 }
 
-bool Field::operator!=(const Field& x) const
+bool operator!=(const Field& a, const Field& b)
 {
-	return !(x == *this);
+	return !(b == a);
 }
 
-bool Field::operator<=(const Field& x) const
+bool operator<=(const Field& a, const Field& b)
 {
-	return (x < *this) || (x == *this);
+	return !(b > a);
 }
 
-bool Field::operator>=(const Field& x) const
+bool operator>=(const Field& a, const Field& b)
 {
-	return (x > *this) || (x == *this);
+	return !(b < a);
 }
 
 double Field::get() const

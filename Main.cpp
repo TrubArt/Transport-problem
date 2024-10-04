@@ -14,6 +14,7 @@ int main()
 	SetConsoleOutputCP(1251);
 
 	classTask();
+	std::cin.get();
 }
 
 
